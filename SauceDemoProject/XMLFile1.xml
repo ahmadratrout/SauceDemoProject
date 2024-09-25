@@ -2,11 +2,7 @@
 <suite name="SauceDemoTestSuite" parallel="none">
 	<test name="EndToEndTests">
 		<classes>
-			<class name="SauceDemoProject.Tests.LoginWithValidCredentialsTest" />
-			<class name="SauceDemoProject.Tests.AddProductToCartTest" />
-			<class name="SauceDemoProject.Tests.CheckTotalPriceWhenBuyItemsTest" />
-			<class name="SauceDemoProject.Tests.RemoveProductFromCartTest" />
-			<class name="SauceDemoProject.Tests.SortProductByNameTest" />
+			<class name="SauceDemoProject.Program" />
 		</classes>
 	</test>
 </suite>
