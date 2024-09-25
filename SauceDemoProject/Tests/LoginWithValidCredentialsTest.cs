@@ -17,7 +17,6 @@ namespace SauceDemoProject.Tests
             loginPage = new Macros.LoginPage(_driver);
         }
         public void  Execute() {
-            Configurations._test.Log(Status.Info, "Starting test: CheckTotalPriceForProductsInCart");
             loginPage.Login(username, pwd);
         }
         public void Teardown()

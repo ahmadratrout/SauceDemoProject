@@ -12,8 +12,7 @@ namespace SauceDemoProject
         {
 
             #region Web Driver
-            IWebDriver driver = new ChromeDriver("C:\\Users\\AhmadRA\\source\\repos\\SauceDemoProject\\SauceDemoProject\\drivers");
-            Configurations conf = new Configurations();
+            IWebDriver driver = new ChromeDriver(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "drivers"));
             #endregion
 
             #region Ui Test

@@ -13,7 +13,7 @@ namespace SauceDemoProject.TestSets
     public class E2EUiTest : IAutomationTestSet
     {
         //public static IWebDriver _driver ;
-        public static IWebDriver _driver = new ChromeDriver("C:\\Users\\AhmadRA\\source\\repos\\SauceDemoProject\\SauceDemoProject\\drivers");
+        public static IWebDriver _driver = new ChromeDriver(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "drivers"));
         public E2EUiTest(IWebDriver driver) 
         { 
             //_driver = driver;
