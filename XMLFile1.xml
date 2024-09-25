@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<suite name="SauceDemoTestSuite" parallel="none">
+	<test name="EndToEndTests">
+		<classes>
+			<class name="SauceDemoProject.Tests.LoginWithValidCredentialsTest" />
+			<class name="SauceDemoProject.Tests.AddProductToCartTest" />
+			<class name="SauceDemoProject.Tests.CheckTotalPriceWhenBuyItemsTest" />
+			<class name="SauceDemoProject.Tests.RemoveProductFromCartTest" />
+			<class name="SauceDemoProject.Tests.SortProductByNameTest" />
+		</classes>
+	</test>
+</suite>
