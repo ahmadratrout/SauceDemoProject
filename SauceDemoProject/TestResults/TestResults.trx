@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="d6d76c1f-ddef-4acc-bbd7-ab760d282581" name="DESKTOP-HOO98RJ$@DESKTOP-HOO98RJ 2024-09-25 20:38:43" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2024-09-25T20:38:43.3433074+03:00" queuing="2024-09-25T20:38:43.3433078+03:00" start="2024-09-25T20:38:42.5957916+03:00" finish="2024-09-25T20:38:43.3437032+03:00" />
-  <TestSettings name="default" id="798e3f62-2795-493b-ac14-846aa1a0e8d4">
-    <Deployment runDeploymentRoot="DESKTOP-HOO98RJ$_DESKTOP-HOO98RJ_2024-09-25_20_38_43" />
+<TestRun id="7b786c75-93e2-4eaf-b5c6-fe92da445310" name="DESKTOP-HOO98RJ$@DESKTOP-HOO98RJ 2024-09-25 23:13:55" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2024-09-25T23:13:55.2782546+03:00" queuing="2024-09-25T23:13:55.2782549+03:00" start="2024-09-25T23:13:54.6626726+03:00" finish="2024-09-25T23:13:55.2786397+03:00" />
+  <TestSettings name="default" id="6beb8f45-1397-4fc8-92f5-fba51c993034">
+    <Deployment runDeploymentRoot="DESKTOP-HOO98RJ$_DESKTOP-HOO98RJ_2024-09-25_23_13_55" />
   </TestSettings>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -18,7 +18,7 @@ NUnit Adapter 4.6.0.0: Test execution complete&#xD;
 </StdOut>
     </Output>
     <RunInfos>
-      <RunInfo computerName="DESKTOP-HOO98RJ" outcome="Warning" timestamp="2024-09-25T20:38:43.2672182+03:00">
+      <RunInfo computerName="DESKTOP-HOO98RJ" outcome="Warning" timestamp="2024-09-25T23:13:55.2058577+03:00">
         <Text>No test is available in C:\Users\AhmadRA\source\repos\SauceDemoProject\SauceDemoProject\bin\Debug\net8.0\SauceDemoProject.dll. Make sure that test discoverer &amp; executors are registered and platform &amp; framework version settings are appropriate and try again.</Text>
       </RunInfo>
     </RunInfos>
