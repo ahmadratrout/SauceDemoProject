@@ -4,18 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using SauceDemoProject.Macros;
 
 namespace SauceDemoProject.Tests
 {
+    [TestFixture]
     public class RemoveProductFromCartTest : IAutomationExecute
     {
         private Macros.ProductPage productPage;
+        private IWebDriver _driver;
+        LoginPage loginPage;
 
-        public RemoveProductFromCartTest(IWebDriver driver)
+        [SetUp]
+        public void Setup()
         {
-            productPage = new Macros.ProductPage(driver);
+            _driver = new ChromeDriver(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "drivers"));
+            productPage = new Macros.ProductPage(_driver);
+            InitForCheckTotalPriceRemoveItemFromCart();
+        }
+        public RemoveProductFromCartTest()
+        {
         }
         #region Main Function
+        [Test, Order(4)]
         public void Execute()
         {
             productPage.GoToProductPage();
@@ -30,6 +42,20 @@ namespace SauceDemoProject.Tests
             
         }
         #endregion
-        public void Teardown() { }
+        [TearDown]
+        public void Teardown()
+        {
+            _driver.Quit();
+            _driver.Dispose();
+        }
+
+        private void InitForCheckTotalPriceRemoveItemFromCart()
+        {
+            loginPage = new Macros.LoginPage(_driver);
+            loginPage.Login("standard_user", "secret_sauce");
+            productPage.GoToProductPage();
+            productPage.AddProductToCart("Sauce Labs Backpack");
+        }
+        
     }
 }

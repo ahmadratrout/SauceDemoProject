@@ -14,18 +14,17 @@ namespace SauceDemoProject.TestSets
     {
         //public static IWebDriver _driver ;
         public static IWebDriver _driver = new ChromeDriver(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "drivers"));
-        public E2EUiTest(IWebDriver driver) 
+        public E2EUiTest() 
         { 
-            //_driver = driver;
         }
 
         public static IAutomationExecute[] iAutomationExecutes = new IAutomationExecute[]
         {
-            new LoginWithValidCredentialsTest(_driver),
-            new AddProductToCartTest(_driver),
-            new CheckTotalPriceWhenBuyItemsTest(_driver),
-            new RemoveProductFromCartTest(_driver),
-            new SortProductByNameTest(_driver)
+              new LoginWithValidCredentialsTest(),
+              new AddProductToCartTest(),
+              new CheckTotalPriceWhenBuyItemsTest(),
+              new RemoveProductFromCartTest(),
+              new SortProductByNameTest()
 
         };
 
@@ -38,7 +37,7 @@ namespace SauceDemoProject.TestSets
             //Configurations.FlushReport(); // Generate the report
             _driver.Quit();
             _driver.Dispose();
-            
+
         }
     }
 }

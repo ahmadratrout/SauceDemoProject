@@ -3,10 +3,6 @@
 	<test name="EndToEndTests">
 		<classes>
 			<class name="SauceDemoProject.Tests.LoginWithValidCredentialsTest" />
-			<class name="SauceDemoProject.Tests.AddProductToCartTest" />
-			<class name="SauceDemoProject.Tests.CheckTotalPriceWhenBuyItemsTest" />
-			<class name="SauceDemoProject.Tests.RemoveProductFromCartTest" />
-			<class name="SauceDemoProject.Tests.SortProductByNameTest" />
 		</classes>
 	</test>
 </suite>

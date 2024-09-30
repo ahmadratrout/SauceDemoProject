@@ -18,11 +18,11 @@ namespace SauceDemoProject
         {
 
             #region Web Driver
-            IWebDriver driver = new ChromeDriver(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "drivers"));
+            
             #endregion
 
             #region Ui Test
-            var testSet = new TestSets.E2EUiTest(driver);
+            var testSet = new TestSets.E2EUiTest();
             testSet.Execute();
             #endregion
         }

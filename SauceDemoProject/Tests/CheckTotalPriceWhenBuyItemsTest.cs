@@ -4,20 +4,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using SauceDemoProject.Macros;
 
 namespace SauceDemoProject.Tests
 {
+    [TestFixture]
     public class CheckTotalPriceWhenBuyItemsTest : IAutomationExecute
     {
         private const double expectedPrice = 29.99;
         private CheckoutPage checkoutPage;
-        public CheckTotalPriceWhenBuyItemsTest(IWebDriver driver) {
-            checkoutPage = new CheckoutPage(driver);
+        private IWebDriver _driver;
+        private LoginPage loginPage;
+        private ProductPage productPage;
+
+        [SetUp]
+        public void Setup()
+        {
+            _driver = new ChromeDriver(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "drivers"));
+            checkoutPage = new CheckoutPage(_driver);
+            InitForCheckTotalPrice();
+
         }
-        public void Teardown() {
+        public CheckTotalPriceWhenBuyItemsTest() {
+            
+        }
+        [TearDown]
+        public void Teardown()
+        {
+            _driver.Quit();
+            _driver.Dispose();
         }
         #region Main Function
+        [Test, Order(3)]
         public void Execute() {
             checkoutPage.GoToCart();
             checkoutPage.BuyItems("wrg", "rg", "erf");
@@ -32,6 +51,14 @@ namespace SauceDemoProject.Tests
             if (totalPrice - expectedPrice != 0) {
                 throw new Exception("");
             }
+        }
+        private void InitForCheckTotalPrice() {
+            loginPage = new Macros.LoginPage(_driver);
+            productPage = new ProductPage(_driver);
+            loginPage.Login("standard_user", "secret_sauce");
+            productPage.GoToProductPage();
+            productPage.AddProductToCart("Sauce Labs Backpack");
+
         }
         #endregion
     }
